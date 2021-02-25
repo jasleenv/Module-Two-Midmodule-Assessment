@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <h1> Dice Roller </h1>
+    <meta charset="UTF-8"
+</head>
+<body>
+   <p>Number of dice:  <input type="number" id="numberOfDice"> </p>
+    <button type="submit" onclick="rollDice()" id="dice-para" >Roll the dice! </button> </p>
+<h2>History</h2>
+    <ul id="history"></ul>
+    <p id ="sum-para"></p>
+
+    <script>
+        function rollDice() {
+            const dice = ['&#9856 = ⚀','&#9857 = ⚁','&#9858 = ⚂','&#9859 = ⚃','&#9860 = ⚄','&#9861 = ⚅']
+       return dice
+            let amountOfDice = document.getElementById("numberOfDice").value
+            let dicePics = Math.floor(Math.random()* dice.length)
+            return dicePics
+          
+            let sumoOfDice = dicePics.value
+            let history = document.getElementById("history")
+            let li = document.createElement("li")
+            li.textContent = dicePics
+            document.body.appendChild(li)
+            
+        }
+
+    </script>
+</body>
+
+
+<!-- As a user I can select how many dice I want to roll
+- As a user, I can click a button to roll that many dice
+- As a user, I can view the dice roll as well as its sum
+- As a user, I can view the history of all of my previous rolls and their sums
+
+## Testing notes:
+
+- Your history items should be `li` elements.
+- Clicking the roll button the first time should not add anything to the history
+- Subsequent clicks to the rolls button should add the previous roll to the history
+- The only `li` elements should be your history dice rolls
+- You should have exactly one `input` element where the number of dice can be entered
+- You should have exactly one `button` element that the user can click on to roll the dice
+- The die result from rolling should be stored in an element with the id "dice-para"
+- The sum from rolling should be stored in an element with the id "sum-para"
+- Use the follow HTML entity values for dice:
+
+```
+
+```
+-->
+
+</html>
