@@ -12,23 +12,7 @@
     <ul id="history"></ul>
     <p id ="sum-para"></p>
 
-    <script>
-        function rollDice() {
-            const dice = ['&#9856 = ⚀','&#9857 = ⚁','&#9858 = ⚂','&#9859 = ⚃','&#9860 = ⚄','&#9861 = ⚅']
-       return dice
-            let amountOfDice = document.getElementById("numberOfDice").value
-            let dicePics = Math.floor(Math.random()* dice.length)
-            return dicePics
-          
-            let sumoOfDice = dicePics.value
-            let history = document.getElementById("history")
-            let li = document.createElement("li")
-            li.textContent = dicePics
-            document.body.appendChild(li)
-            
-        }
 
-    </script>
 </body>
 
 
